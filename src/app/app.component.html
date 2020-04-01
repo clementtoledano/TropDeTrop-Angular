@@ -1,6 +1,22 @@
 <app-menu></app-menu>
-<router-outlet></router-outlet>
-<br>
----------------------------------------------------------------------------------------------------------------------------------------
-<br>
-footer - footer - footer - footer - footer - footer - footer - footer - footer - footer - footer - footer - footer - footer
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-4">
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <a routerLink="/conditions" routerLinkActive="active">F.A.Q</a><br>
+          <a routerLink="/conditions" routerLinkActive="active">Flux RSS</a><br>
+          <a routerLink="/conditions" routerLinkActive="active">Mentions légales</a><br>
+          <a routerLink="/conditions" routerLinkActive="active">Conditions d'utilisation</a><br>
+          <a routerLink="/conditions" routerLinkActive="active">Nous contacter</a><br>
+          <p>Trop2trop Inc © 2020. All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

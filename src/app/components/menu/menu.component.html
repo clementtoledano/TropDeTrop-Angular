@@ -1,14 +1,22 @@
-<div class="menu">
-  <a routerLink="" title=""><img class="m-2" src="../../../assets/img/logo.svg" alt="logo"></a>
-  <button routerLink="/post" routerLinkActive="active" class="btn btn-primary d-inline m-2">Écrire un post</button>
-  <form class="d-inline m-2" action="" method="get">
-    <input type="text" class="" name="search" id="search" placeholder="Rechercher">
-    <button class="btn btn-danger" type="submit" name="do" value="search"><i class=" fa fa-search"></i></button>
-  </form>
-  <button class="btn btn-warning d-inline m-2" (click)="openModal()"><strong>S'identifier (modal)</strong></button>
-  <button class="btn btn-warning d-inline m-2" routerLink="/register" title=""><strong>S'inscrire</strong></button>
-  <a routerLink="/conditions" routerLinkActive="active">Conditions</a>
+<div class="container-fluid ">
+  <div class="row menu">
+    <div class="col-sm">
+      <a routerLink="" title=""><img class="logo-img" src="../../../assets/img/logo.svg"  alt="logo"><span class="logo-text">TROP2TROP</span></a>
+    </div>
+    <div class="col-sm">
+      <form class="m-2" action="" method="get">
+        <input type="text" class="" name="search" id="search" placeholder="Rechercher">
+        <button class="btn btn-danger" type="submit" name="do" value="search"><i class=" fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="col-sm">
+      <button routerLink="/post" routerLinkActive="active" class="btn btn-primary m-2">Écrire un post</button>
+      <button class="btn btn-warning m-2" (click)="openModal()"><strong>S'identifier (modal)</strong></button>
+      <button class="btn btn-warning m-2" routerLink="/register" title=""><strong>S'inscrire</strong></button>
+    </div>
+  </div>
+  <div *ngIf="!isRegister">
+    <button class="btn btn-warning m-2" (click)="logout()"><strong>Logout (modal)</strong></button>
+  </div>
 </div>
-<div *ngIf="isRegister">
-  <button class="btn btn-warning d-inline m-2" (click)="logout()"><strong>S'identifier (modal)</strong></button>
-</div>
+

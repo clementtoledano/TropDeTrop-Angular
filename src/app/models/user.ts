@@ -14,4 +14,5 @@ export class User {
   updated_at: Date;
   postslikes: Post;
   postsdislikes: Post;
+  token: string;
 }
