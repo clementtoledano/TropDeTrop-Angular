@@ -1,0 +1,26 @@
+<p>list-post works!</p>
+      <table class="table table-dark table-striped">
+        <thead>
+        <th scope="col">ID</th>
+        <th scope="col">Content</th>
+        <th scope="col">Likes</th>
+        <th scope="col">Dislikes</th>
+        <th scope="col">Active</th>
+        <th scope="col">Category</th>
+        <th scope="col">Created At</th>
+        <th scope="col">Updated At</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tempPost of posts">
+          <th scope="row">{{tempPost.id}}</th>
+          <td>{{tempPost.content}}</td>
+          <td>{{tempPost.userlike}}</td>
+          <td>{{tempPost.userdislike}}</td>
+          <td>{{tempPost.active}}</td>
+          <td>{{tempPost.category}}</td>
+          <td>{{tempPost.created_at}}</td>
+          <td>{{tempPost.updated_at}}</td>
+        </tr>
+        </tbody>
+      </table>
+
